@@ -9,7 +9,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  z-index: 999999999999;
+  z-index: 99999999;
+  height: 8vh;
 }
 
 header .logo {
@@ -45,13 +46,13 @@ header .navbar ul li a {
 }
 
 header .navbar ul li a:hover {
-  color: #fff;
+  color: #ff0a7a;
 }
 
-header .navbar ul li:hover {
+/* header .navbar ul li:hover {
   background: var(--secondary);
   border-radius: 8px;
-}
+} */
 
 .login {
   display: inline-block;
@@ -71,8 +72,66 @@ header .navbar ul li:hover {
 .login:hover {
   background-color: var(--secondary);
 }
+.burger-icon{
+  font-size: 40px;
+  color: var(--secondary);
+  position: fixed;
+  top: 30px;
+  left: 40px;
+  z-index:999999999;
+}
+
+.sideBar-home{
+  width: 0;
+  transition: 1s all;
+}
+.Togell-links{
+  width: 70%;
+  display: flex-inline-block;
+  flex-direction: column;
+}
+.Togell-links div{
+  position: absolute;
+  top: 120px;
+  right: 90px;
+  font-size: 25px;
+}
+.Togell-links div a{
+  color: var(--third);
+}
+.navbar-togell ul{
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 25px;
+}
+.navbar-togell ul li {
+  list-style: none;
+
+}
+.navbar-togell ul li a{
+  color: var(--secondary);
+}
+.open{
+  width: 80%;
+  height: 100%;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999999;
+  transition: 0.3s all;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 @media screen and (max-width: 768px) {
+  header {
+    position: absolute;
+  }
   header .navbar ul {
     display: none;
   }

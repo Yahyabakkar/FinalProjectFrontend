@@ -54,7 +54,7 @@ body {
   position: relative;
 }
 .container::before {
-  z-index: 111;
+  z-index: 1;
   content: "";
   position: absolute;
   top: 0;
@@ -85,7 +85,7 @@ body {
 }
 
 .text-overlay {
-  z-index: 999999999;
+  z-index: 1;
 }
 .text-overlay h1 {
   font-size: 82px;
@@ -320,5 +320,11 @@ textarea {
   .text-overlay button[type="submit"] {
     left: 60%;
     top: 75%;
+  }
+  #about{
+    flex-direction: column;
+  }
+  .cardBox {
+    width: 100%;
   }
 }

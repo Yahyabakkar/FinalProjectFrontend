@@ -1,38 +1,31 @@
 import React, { useState } from "react";
 import "./LoginForm.css";
 import axios from "axios";
-  
+
 export default function LoginForm() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [data, setData] = useState({});
+  const handleInput = (e) => {
+    setData({ ...data, [e.target.name]: e.target.value });
+  };
+  console.log(data);
   const [error, setError] = useState("");
 
   const handleLogin = async (e) => {
     e.preventDefault();
-
-    try {
-      const response = await axios.post("/api/login", { email, password });
-      const { token, user } = response.data;
-      // Handle successful login
-      console.log("Logged in user:", user);
-      console.log("Token:", token);
-    } catch (error) {
-      setError("Invalid credentials. Please try again.");
-      console.log("Login error:", error);
-    }
+    
+    axios
+      .post(`/users/login`, data)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((error) => console.log(error));
   };
   return (
     <div class="login-box">
       <p>Login</p>
       <form>
-        <div class="user-box">
-          <input
-            required
-            name="email"
-            type="text"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
+        <div className="user-box">
+          <input required name="email" type="text" onChange={handleInput} />
           <label>Email</label>
         </div>
         <div class="user-box">
@@ -40,19 +33,18 @@ export default function LoginForm() {
             required
             name="password"
             type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={handleInput}
           />{" "}
           <label>Password</label>
         </div>
         {error && <p className="error-message">{error}</p>}
-        <a href="#">
+        <button onClick={handleLogin} href="#">
           <span></span>
           <span></span>
           <span></span>
           <span></span>
           Submit
-        </a>
+        </button>
       </form>
     </div>
   );
