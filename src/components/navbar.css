@@ -36,16 +36,16 @@ header .navbar ul li:last-child {
   margin-right: 0;
 }
 
-header .navbar ul li a {
+header .navbar ul li>a {
   font-family: poppins;
   font-size: 22px;
-  padding: 20px;
+  padding: 10px 20px;
   color: var(--third);
   display: block;
   transition: 0.2s;
 }
 
-header .navbar ul li a:hover {
+header .navbar ul li>a:not(.login):hover {
   color: #ff0a7a;
 }
 
@@ -128,6 +128,7 @@ header .navbar ul li a:hover {
   align-items: center;
 }
 
+
 @media screen and (max-width: 768px) {
   header {
     position: absolute;
@@ -160,4 +161,32 @@ header .navbar ul li a:hover {
   header .navbar .burger-icon.open span:nth-child(3) {
     transform: translateY(-10px) rotate(-45deg);
   }
+}
+.profile-dropdown a{
+  font-size: 20px;
+  
+}
+.profile-dropdown{
+  width: 100%;
+position: absolute;
+top: 140%;
+background-color: white;
+padding:10px;
+display: flex;
+align-items: center;
+flex-direction: column;
+}
+.profile-dropdown button{
+  font-size: 20px;
+  padding: 10px 15px;
+  background-color: transparent;
+  border: none;
+}
+.profile-username{
+  cursor: pointer;
+  position: relative;
+  font-size: 20px;
+  display: flex;
+  gap:5px;
+  align-items: center;
 }

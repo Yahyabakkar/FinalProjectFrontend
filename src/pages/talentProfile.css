@@ -1,0 +1,55 @@
+/* talentProfile.css */
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  
+  .profile-picture {
+    margin-right: 20px;
+  }
+  
+  .profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+  }
+  
+  .profile-info {
+    text-align: left;
+  }
+  
+  .profile-info p,
+  .profile-info h2,
+  .profile-info h3,
+  .profile-info ul {
+    margin-bottom: 10px;
+  }
+  
+  ul {
+    list-style: none;
+
+  }
+  
+  .experience-item,
+  .education-item {
+    margin-bottom: 20px;
+  }
+  
+  .experience-item h4,
+  .education-item h4 {
+    margin-bottom: 5px;
+  }
+  
+  /* Additional styling for specific elements */
+  
+  .experience-list {
+    margin-bottom: 30px;
+  }
+  
+  .education-list {
+    margin-bottom: 30px;
+  }
+  

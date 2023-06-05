@@ -1,11 +1,12 @@
-import React from "react";
-import Navbar from "../components/navbar";
-import Footer from "../components/footer.jsx";
+import React, { useEffect, useState } from "react";
+
 
 
 import "./talent.css";
+import axios from "axios";
+import { Link } from "react-router-dom";
 export default function Talent() {
-    const data = [{
+    const [data,setData] = useState([{
         name: "Mazen elali",
         image: "https://images.pexels.com/photos/2102413/pexels-photo-2102413.jpeg?auto=compress&cs=tinysrgb&w=1600",
         role: "web developer",
@@ -19,66 +20,31 @@ export default function Talent() {
         github: "",
         linkedin: '',
         instagram: "",
-    }, {
+    },  {
         name: "Mazen elali",
         image: "https://images.pexels.com/photos/2102413/pexels-photo-2102413.jpeg?auto=compress&cs=tinysrgb&w=1600",
         role: "web developer",
         github: "",
         linkedin: '',
         instagram: "",
-    }, {
-        name: "Mazen elali",
-        image: "https://images.pexels.com/photos/2102413/pexels-photo-2102413.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        role: "web developer",
-        github: "",
-        linkedin: '',
-        instagram: "",
-    }, {
-        name: "Mazen elali",
-        image: "https://images.pexels.com/photos/2102413/pexels-photo-2102413.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        role: "web developer",
-        github: "",
-        linkedin: '',
-        instagram: "",
-    }, {
-        name: "Mazen elali",
-        image: "https://images.pexels.com/photos/2102413/pexels-photo-2102413.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        role: "web developer",
-        github: "",
-        linkedin: '',
-        instagram: "",
-    }, {
-        name: "Mazen elali",
-        image: "https://images.pexels.com/photos/2102413/pexels-photo-2102413.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        role: "web developer",
-        github: "",
-        linkedin: '',
-        instagram: "",
-    }, {
-        name: "Mazen elali",
-        image: "https://images.pexels.com/photos/2102413/pexels-photo-2102413.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        role: "web developer",
-        github: "",
-        linkedin: '',
-        instagram: "",
-    }, {
-        name: "Mazen elali",
-        image: "https://images.pexels.com/photos/2102413/pexels-photo-2102413.jpeg?auto=compress&cs=tinysrgb&w=1600",
-        role: "web developer",
-        github: "",
-        linkedin: '',
-        instagram: "",
-    },]
+    },])
 
 
 
-
+    useEffect(()=>{
+        axios.get(`${process.env.REACT_APP_URL}/profile/profiles`).then(res=>{
+            console.log(res.data)
+            setData(res.data)  
+        }).catch(err=>{console.error(err)})
+    },[])
     return (
         <div className="talents-container">
             <div className="talents-cards">
                 {data.map((ele)=>{ return <div class="cardContainer">
-                    <div class="profileDiv">
-                        <img src={ele.image} alt="" />
+                    <div class="profileDiv" >
+                        <Link to={`/talent/${ele._id}`}>
+                        <img src={ele.picture} alt=""  />
+                        </Link>
                     </div>
                     <div class="infoDiv">
                         <div class="nameDiv">

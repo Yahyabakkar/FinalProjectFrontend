@@ -3,7 +3,6 @@ import Img from "./macbook-apple-imac-computer-39284.jpeg";
 import Footer from "../components/footer.jsx";
 import SecondImg from "./pexels-photo-461064.jpeg";
 import ThirdImg from "./pexels-photo-1181244.webp";
-import Navbar from "../components/navbar";
 
 export default function Home() {
   return (
