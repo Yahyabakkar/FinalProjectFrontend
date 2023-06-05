@@ -53,9 +53,24 @@ export default function Navbar() {
                     </li>
                   </ul>
                 </nav>
-                <Link to="/login" className=".profile-dropdown-login">
-                  Login
-                </Link>
+                {userData()?._id ? (
+              <span
+                className="profile-username"
+                onClick={() => setOpenProfile(!openProfile)}
+              >
+                {userData().email} <CgProfile />
+                {openProfile && (
+                  <span className="profile-dropdown">
+                    <Link to="/profile">Profile</Link>
+                    <button onClick={() => signOut()}>Logout</button>
+                  </span>
+                )}
+              </span>
+            ) : (
+              <Link to="/login" className="login">
+                Login
+              </Link>
+            )} 
               </>
             )}
           </div>
