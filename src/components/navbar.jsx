@@ -51,11 +51,11 @@ export default function Navbar() {
                     <li>
                       <a href="/talent">Talents</a>
                     </li>
-                    <li>
-                      <a href="/contact">ContactUs</a>
-                    </li>
                   </ul>
                 </nav>
+                <Link to="/login" className=".profile-dropdown-login">
+                  Login
+                </Link>
               </>
             )}
           </div>
