@@ -36,7 +36,7 @@ header .navbar ul li:last-child {
   margin-right: 0;
 }
 
-header .navbar ul li>a {
+header .navbar ul li > a {
   font-family: poppins;
   font-size: 22px;
   padding: 10px 20px;
@@ -45,14 +45,9 @@ header .navbar ul li>a {
   transition: 0.2s;
 }
 
-header .navbar ul li>a:not(.login):hover {
+header .navbar ul li > a:not(.login):hover {
   color: #ff0a7a;
 }
-
-/* header .navbar ul li:hover {
-  background: var(--secondary);
-  border-radius: 8px;
-} */
 
 .login {
   display: inline-block;
@@ -72,36 +67,37 @@ header .navbar ul li>a:not(.login):hover {
 .login:hover {
   background-color: var(--secondary);
 }
-.burger-icon{
+.burger-icon {
   font-size: 40px;
   color: var(--secondary);
   position: fixed;
   top: 30px;
   left: 40px;
-  z-index:999999999;
+  z-index: 999999999;
 }
 
-.sideBar-home{
+.sideBar-home {
   width: 0;
   transition: 1s all;
 }
-.Togell-links{
+.Togell-links {
   width: 70%;
   display: flex-inline-block;
   flex-direction: column;
 }
-.Togell-links div{
+.Togell-links div {
   position: absolute;
   top: 120px;
-  right: 90px;
+  right: 150px;
   font-size: 25px;
 }
-.Togell-links div a{
+.Togell-links div a {
   color: var(--third);
 }
-.navbar-togell ul{
+.navbar-togell ul {
   height: 400px;
   display: flex;
+  margin-top:100px;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
@@ -109,12 +105,11 @@ header .navbar ul li>a:not(.login):hover {
 }
 .navbar-togell ul li {
   list-style: none;
-
 }
-.navbar-togell ul li a{
+.navbar-togell ul li a {
   color: var(--secondary);
 }
-.open{
+.open {
   width: 80%;
   height: 100%;
   background-color: #fff;
@@ -128,10 +123,17 @@ header .navbar ul li>a:not(.login):hover {
   align-items: center;
 }
 
-
 @media screen and (max-width: 768px) {
   header {
     position: absolute;
+  }
+  .login{
+    font-size: 25px ;
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  color: #ff0a7a;
+  margin-top: 20px ;
   }
   header .navbar ul {
     display: none;
@@ -162,35 +164,48 @@ header .navbar ul li>a:not(.login):hover {
     transform: translateY(-10px) rotate(-45deg);
   }
 }
-.profile-dropdown a{
+.profile-dropdown a {
   font-size: 20px;
-  
+  color: black;
 }
-.profile-dropdown{
+.profile-dropdown a:hover {
+  color: var(--secondary);
+}
+.profile-dropdown button:hover {
+  color: var(--secondary);
+}
+
+.profile-dropdown {
   width: 100%;
-position: absolute;
-top: 140%;
-background-color: white;
-padding:10px;
-display: flex;
-align-items: center;
-flex-direction: column;
+  position: absolute;
+  top: 140%;
+  background-color: white;
+
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
-.profile-dropdown button{
+.profile-dropdown button {
   font-size: 20px;
+  color: black;
+
   padding: 10px 15px;
   background-color: transparent;
   border: none;
 }
-.profile-username{
+.profile-username {
   cursor: pointer;
   position: relative;
   font-size: 20px;
   display: flex;
-  gap:5px;
+  gap: 5px;
   align-items: center;
 }
-.profile-dropdown-login{
+.profile-username:hover{
+  color: var(--secondary);
+}
+.profile-dropdown-login {
   display: inline-block;
   padding: 10px 20px;
   font-size: 16px;
