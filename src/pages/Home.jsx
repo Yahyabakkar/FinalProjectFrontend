@@ -16,14 +16,14 @@ export default function Home() {
         </div>
       </div>
       <div id="about">
-        <div class="cardBox">
-          <div class="card">
-            <div class="h4">
+        <div className="cardBox">
+          <div className="card">
+            <div className="h4">
               <img src={SecondImg} alt="" />
             </div>
 
-            <div class="content">
-              <div class="h3">How's it goin alumnis ?</div>
+            <div className="content">
+              <div className="h3">How's it goin alumnis ?</div>
               <p>
                 This is CodiTalent, your tech website!!!Lets make this world a
                 better place for all of us. Keep prospering...Keep learning!!!
@@ -31,26 +31,26 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div class="cardBox">
-          <div class="card">
-            <div class="h4">
+        <div className="cardBox">
+          <div className="card">
+            <div className="h4">
               <img src={ThirdImg} alt="" />
             </div>
 
-            <div class="content">
-              <div class="h3">What you can do here ?</div>
+            <div className="content">
+              <div className="h3">What you can do here ?</div>
               <p>Here you can make your proffessional profile</p>
             </div>
           </div>
         </div>
-        <div class="cardBox">
-          <div class="card">
-            <div class="h4">
+        <div className="cardBox">
+          <div className="card">
+            <div className="h4">
               <img src={Img} alt="" />
             </div>
 
-            <div class="content">
-              <div class="h3">What are you waiting for ?</div>
+            <div className="content">
+              <div className="h3">What are you waiting for ?</div>
               <p>Start with editing your profile and make it better </p>
             </div>
           </div>
