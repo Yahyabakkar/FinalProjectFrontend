@@ -11,7 +11,7 @@ export default function Home() {
         <div className="text-overlay">
           <div>
             <h1>Welcome to CodiTalent</h1>
-            <p>Find your dream job today</p>
+            <p>Find best talents here</p>
           </div>
         </div>
       </div>
