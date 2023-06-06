@@ -46,7 +46,6 @@ footer a:hover {
   display: flex;
   gap: 10px;
   margin-right: 300px;
-
 }
 
 .social-media li a {
@@ -59,3 +58,25 @@ footer a:hover {
   border-bottom: 1px solid white;
 }
 
+/* Media Query for max width 768px */
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: auto;
+  }
+
+  .p {
+    margin-bottom: 10px;
+  }
+
+  .social-media {
+    margin-top: 10px;
+    margin-right: 0;
+  }
+
+  .social-media ul {
+    margin: 0 auto;
+  }
+}
