@@ -75,8 +75,8 @@ const FormPost = ({ data }) => {
         return res.json();
       })
       .then((response) => {
-        console.log(response)
-        const url = response.data.data.url;
+        console.log(response.data); 
+        const url = response.data.url;
         const data = { ...formData, picture: url };
         axios
           .post(`${process.env.REACT_APP_URL}/profile/profiles`, data, {
